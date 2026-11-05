@@ -10,29 +10,20 @@ void setup() {
   pinMode(buzzerPin, OUTPUT);  
 }
 
+void playMelody(int speakerPin) {
+  //tone(speakerPin, <<frequency>>); delay(<<delay>>);
+  //noTone(speakerPin);
+}
+
 void loop() {
   long measurement = sensor.capacitiveSensor(30);  // Take 30 samples for accuracy
   Serial.print("Measurement: ");
   Serial.println(measurement);
 
-  if (measurement > threshold) {
-      // Recitation Assignment - ALTER THE CODE HERE, replace pseudocode
-        // Play the melody on the buzzer
-    // C4 note for 262 milliseconds
-    // off for 250 milliseconds
+  if (measurement > threshold){
+    playMelody(buzzerPin);
+    Serial.println("Playing");
+  }  
 
-    // G4 note for 392 milliseconds
-    // off for 500 milliseocnds
-
-    // Eb4 note for 311 milliseconds
-    // off for 500 milliseocnds
-
-    // C4 note for 262 milliseconds
-    // off for 250 milliseocnds
-
-
-    
-    // DO NOT CHANGE ANYTHING BELOW THIS LINE !!
-   
-  delay(10);  // Small delay for readability
+  delay(10); 
 }
