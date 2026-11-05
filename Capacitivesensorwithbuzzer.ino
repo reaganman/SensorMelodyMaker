@@ -12,7 +12,7 @@ void setup() {
 
 void playMelody(int speakerPin) {
   //tone(speakerPin, <<frequency>>); delay(<<delay>>);
-  //noTone(speakerPin);
+  noTone(speakerPin);
 }
 
 void loop() {
